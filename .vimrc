@@ -23,7 +23,7 @@ set t_Co=256
 
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
-colorscheme evening
+colorscheme darkblue
 
 set expandtab
 set shiftwidth=4
@@ -36,7 +36,7 @@ set ignorecase
 set smartcase
 
 " CtrlP settings
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*.o
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*.o,*/bower_components/*
 
 au FileType ruby set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType javascript set softtabstop=2 tabstop=2 shiftwidth=2
