@@ -12,7 +12,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'othree/html5.vim'
 Plugin 'moll/vim-node'
-Plugin 'Rip-Rip/clang_complete'
 call vundle#end()
 
 filetype plugin indent on
