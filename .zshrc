@@ -17,6 +17,6 @@ bindkey -M vicmd '^r' history-incremental-search-backward
 alias la='ls -aG'
 alias ll='ls -lG'
 alias lla='ls -laFG'
-alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi -Iinclude'
+alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi'
 
 export EDITOR="$(which vim)"
