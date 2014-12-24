@@ -13,6 +13,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'othree/html5.vim'
 Plugin 'moll/vim-node'
 Plugin 'saltstack/salt-vim'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 call vundle#end()
 
 filetype plugin indent on
