@@ -12,6 +12,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'othree/html5.vim'
 Plugin 'moll/vim-node'
+Plugin 'saltstack/salt-vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -42,3 +43,6 @@ au FileType javascript set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType html set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType css set softtabstop=2 tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.ejs set filetype=html
+
+" Salt files use jinja template syntax
+let g:sls_use_jinja_syntax = 1
