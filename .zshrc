@@ -85,3 +85,4 @@ bindkey -v
 
 alias lla='ls -laFG'
 alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi'
+alias fltk='g++ -std=c++11 -stdlib=libc++ -L/usr/local/lib -lfltk -lpthread -framework Cocoa'
