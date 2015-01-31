@@ -31,6 +31,8 @@ set shiftwidth=4
 set autoindent
 set shiftround
 
+set ruler
+
 set hlsearch
 set incsearch
 set ignorecase
