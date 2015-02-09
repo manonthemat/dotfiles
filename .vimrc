@@ -14,17 +14,19 @@ Plugin 'othree/html5.vim'
 Plugin 'moll/vim-node'
 Plugin 'saltstack/salt-vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 
 filetype plugin indent on
 set nu
 syntax on
 set tabstop=4
-set t_Co=256
+
+set background=dark
 
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
-colorscheme darkblue
+colorscheme solarized
 
 set expandtab
 set shiftwidth=4
