@@ -45,12 +45,11 @@ ZSH_THEME="clean"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras brew npm catimg)
+plugins=(git git-extras brew npm catimg node)
 
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH=$PATH:/usr/local/opt/go/libexec/bin # for go
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,6 +82,8 @@ fi
 
 bindkey -v
 
+bindkey -M viins '^r' history-incremental-search-backward
+bindkey -M vicmd '^r' history-incremental-search-backward
+
 alias lla='ls -laFG'
 alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi'
-alias fltk='g++ -std=c++11 -stdlib=libc++ -L/usr/local/lib -lfltk -lpthread -framework Cocoa'
