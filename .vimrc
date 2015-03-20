@@ -26,7 +26,7 @@ set background=dark
 
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
-colorscheme solarized
+colorscheme darkblue
 
 set expandtab
 set shiftwidth=4
@@ -52,3 +52,5 @@ au BufNewFile,BufRead *.ejs set filetype=html
 
 " Salt files use jinja template syntax
 let g:sls_use_jinja_syntax = 1
+
+autocmd Filetype gitcommit setlocal spell textwidth=72
