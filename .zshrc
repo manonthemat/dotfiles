@@ -45,7 +45,7 @@ ZSH_THEME="clean"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker chucknorris git git-extras brew npm catimg node)
+plugins=(chucknorris git git-extras brew npm catimg node docker nmap)
 
 # User configuration
 
@@ -87,3 +87,4 @@ bindkey -M vicmd '^r' history-incremental-search-backward
 
 alias lla='ls -laFG'
 alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi'
+alias container_clean="docker ps -a | grep 'days ago' | awk '{print $1}' | xargs docker rm"
