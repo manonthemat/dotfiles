@@ -88,3 +88,4 @@ bindkey -M vicmd '^r' history-incremental-search-backward
 alias lla='ls -laFG'
 alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi'
 alias container_clean="docker ps -a | grep 'days ago' | awk '{print $1}' | xargs docker rm"
+alias image_clean="docker images | grep 'none' | awk '{print $3}' | xargs docker rmi"
