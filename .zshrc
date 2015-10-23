@@ -45,12 +45,13 @@ ZSH_THEME="clean"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws git git-extras brew npm node docker nmap)
+plugins=(git git-extras brew npm node docker nmap bower)
 
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
+export GOPATH="/Users/matthiassieber/Go"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,3 +90,5 @@ alias lla='ls -laFG'
 alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi'
 alias container_clean="docker ps -a | grep 'days ago' | awk '{print $1}' | xargs docker rm"
 alias image_clean="docker images | grep 'none' | awk '{print $3}' | xargs docker rmi"
+
+PATH="$PATH:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
