@@ -15,7 +15,13 @@ Plugin 'moll/vim-node'
 Plugin 'saltstack/salt-vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'fatih/vim-go'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 call vundle#end()
+
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
 
 filetype plugin indent on
 set nu
