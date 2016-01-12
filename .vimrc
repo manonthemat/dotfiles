@@ -18,6 +18,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
