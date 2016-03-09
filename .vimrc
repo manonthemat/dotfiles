@@ -19,6 +19,8 @@ Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-fugitive'
+Plugin 'akhaku/vim-java-unused-imports'
+Plugin 'derekwyatt/vim-scala'
 call vundle#end()
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
@@ -48,7 +50,7 @@ set ignorecase
 set smartcase
 
 " CtrlP settings
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*.o,*/bower_components/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*.o,*/bower_components/*,*/target/*,*.class
 
 au FileType ruby set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType javascript set softtabstop=2 tabstop=2 shiftwidth=2
