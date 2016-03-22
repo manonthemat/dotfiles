@@ -50,7 +50,7 @@ set ignorecase
 set smartcase
 
 " CtrlP settings
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*.o,*/bower_components/*,*/target/*,*.class
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*.o,*/bower_components/*,*/target/*,*.class,*/dist/*
 
 au FileType ruby set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType javascript set softtabstop=2 tabstop=2 shiftwidth=2
