@@ -49,6 +49,8 @@ set incsearch
 set ignorecase
 set smartcase
 
+set noswapfile
+
 " CtrlP settings
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*.o,*/bower_components/*,*/target/*,*.class,*/dist/*
 
