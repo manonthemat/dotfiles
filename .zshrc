@@ -92,3 +92,5 @@ alias container_clean="docker ps -a | grep 'days ago' | awk '{print $1}' | xargs
 alias image_clean="docker images | grep 'none' | awk '{print $3}' | xargs docker rmi"
 
 PATH="$PATH:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
+
+autoload zmv
