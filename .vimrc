@@ -21,6 +21,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-fugitive'
 Plugin 'akhaku/vim-java-unused-imports'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'lambdatoast/elm.vim'
 call vundle#end()
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
