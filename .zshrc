@@ -51,7 +51,8 @@ plugins=(git git-extras brew npm node docker nmap bower)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export MANPATH="/usr/local/man:$MANPATH"
-export GOPATH="/Users/matthiassieber/Go"
+export GOPATH="~/Go"
+export LYNX_CFG="~/.lynx.cfg"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,3 +95,5 @@ alias image_clean="docker images | grep 'none' | awk '{print $3}' | xargs docker
 PATH="$PATH:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
 
 autoload zmv
+
+ulimit -n 65536 65536
