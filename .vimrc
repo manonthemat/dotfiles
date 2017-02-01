@@ -21,7 +21,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-fugitive'
 Plugin 'akhaku/vim-java-unused-imports'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'lambdatoast/elm.vim'
+Plugin 'elmcast/elm-vim'
 call vundle#end()
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
@@ -64,5 +64,8 @@ au BufNewFile,BufRead *.ejs set filetype=html
 
 " Salt files use jinja template syntax
 let g:sls_use_jinja_syntax = 1
+
+" requires installation of elm-format: https://github.com/avh4/elm-format
+let g:elm_format_autosave = 1
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
