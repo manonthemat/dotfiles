@@ -49,7 +49,7 @@ plugins=(git git-extras brew npm node docker nmap bower)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/$HOME/.cargo/bin"
 export MANPATH="/usr/local/man:$MANPATH"
 export GOPATH="~/Go"
 export LYNX_CFG="~/.lynx.cfg"
