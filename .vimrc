@@ -22,6 +22,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'akhaku/vim-java-unused-imports'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'elmcast/elm-vim'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
@@ -67,5 +68,8 @@ let g:sls_use_jinja_syntax = 1
 
 " requires installation of elm-format: https://github.com/avh4/elm-format
 let g:elm_format_autosave = 1
+
+" requires installation of rustfmt (via cargo)
+let g:rustfmt_autosave = 1
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
