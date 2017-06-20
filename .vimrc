@@ -23,6 +23,7 @@ Plugin 'akhaku/vim-java-unused-imports'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'elmcast/elm-vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'cespare/vim-toml'
 call vundle#end()
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
