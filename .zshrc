@@ -45,13 +45,12 @@ ZSH_THEME="clean"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras brew npm node docker nmap bower)
+plugins=(git git-extras brew npm node docker nmap bower ssh-agent)
 
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/$HOME/.cargo/bin"
 export MANPATH="/usr/local/man:$MANPATH"
-export GOPATH="~/Go"
 export LYNX_CFG="~/.lynx.cfg"
 
 source $ZSH/oh-my-zsh.sh
@@ -60,11 +59,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
