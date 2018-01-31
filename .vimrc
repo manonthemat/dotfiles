@@ -24,6 +24,8 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'elmcast/elm-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
+Plugin 'racer-rust/vim-racer'
+Plugin 'neovimhaskell/haskell-vim'
 call vundle#end()
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
@@ -54,6 +56,9 @@ set smartcase
 
 set noswapfile
 
+set hidden
+let g:racer_cmd = "~/.cargo/bin/racer"
+
 " CtrlP settings
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*.o,*/bower_components/*,*/target/*,*.class,*/dist/*
 
@@ -74,3 +79,8 @@ let g:elm_format_autosave = 1
 let g:rustfmt_autosave = 1
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
