@@ -26,6 +26,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'racer-rust/vim-racer'
 Plugin 'neovimhaskell/haskell-vim'
+Plugin 'jparise/vim-graphql'
 call vundle#end()
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
