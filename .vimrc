@@ -89,3 +89,4 @@ au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 let g:ale_fix_on_save = 1
+let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
