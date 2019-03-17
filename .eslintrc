@@ -16,7 +16,7 @@
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  plugins: ["react"],
+  plugins: ["react", "graphql"],
   rules: {
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }]
   }
