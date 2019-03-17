@@ -4,7 +4,7 @@
     es6: true,
     node: true
   },
-  extends: "airbnb",
+  extends: ["airbnb","prettier", "prettier/react"],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly"
@@ -16,8 +16,9 @@
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  plugins: ["react", "graphql"],
+  plugins: ["react", "graphql","prettier"],
   rules: {
-    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+    "react/react-in-jsx-scope": 0
   }
 }
