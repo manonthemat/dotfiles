@@ -91,5 +91,5 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 " if ALE isn't working correctly,
 " run :ALEInfo to surface potentially missing deps
 let g:ale_fix_on_save = 1
-let g:ale_fixers = {'javascript': ['eslint']}
+let g:ale_fixers = {'javascript': ['prettier','eslint']}
 " let g:ale_javascript_eslint_use_global = 1
