@@ -29,6 +29,7 @@ Plugin 'neovimhaskell/haskell-vim'
 Plugin 'jparise/vim-graphql'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'w0rp/ale'
+Plugin 'dracula/vim'
 call vundle#end()
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
@@ -43,7 +44,9 @@ set background=dark
 
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
-colorscheme darkblue
+let g:dracula_colorterm = 0
+colorscheme dracula
+
 
 set expandtab
 set shiftwidth=4
