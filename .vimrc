@@ -30,6 +30,7 @@ Plugin 'jparise/vim-graphql'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'w0rp/ale'
 Plugin 'dracula/vim'
+Plugin 'posva/vim-vue'
 call vundle#end()
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
@@ -71,6 +72,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*.o,*/bower_components
 au FileType ruby set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType javascript set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType html set softtabstop=2 tabstop=2 shiftwidth=2
+au FileType vue set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType css set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType cpp set softtabstop=2 tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.ejs set filetype=html
@@ -95,4 +97,5 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 " run :ALEInfo to surface potentially missing deps
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {'javascript': ['prettier','eslint']}
-" let g:ale_javascript_eslint_use_global = 1
+let b:ale_linter_aliases = ['javascript', 'vue']
+let b:ale_linters = ['eslint', 'vls']
