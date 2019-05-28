@@ -32,6 +32,8 @@ Plugin 'w0rp/ale'
 Plugin 'dracula/vim'
 Plugin 'posva/vim-vue'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'mhinz/vim-mix-format'
+
 call vundle#end()
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
@@ -100,3 +102,6 @@ let g:ale_fix_on_save = 1
 let g:ale_fixers = {'javascript': ['prettier','eslint']}
 let b:ale_linter_aliases = ['javascript', 'vue']
 let b:ale_linters = ['eslint', 'vls']
+
+" format Elixir files on saving
+let g:mix_format_on_save = 1
