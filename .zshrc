@@ -45,7 +45,7 @@ ZSH_THEME="clean"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras brew npm node docker nmap bower ssh-agent)
+plugins=(git git-extras npm node docker nmap ssh-agent kubectl)
 
 # User configuration
 
@@ -87,8 +87,7 @@ alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi'
 alias container_clean="docker ps -a | grep 'days ago' | awk '{print $1}' | xargs docker rm"
 alias image_clean="docker images | grep 'none' | awk '{print $3}' | xargs docker rmi"
 
-PATH="$PATH:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
-
 autoload zmv
 
 ulimit -n 65536 65536
+ulimit -f unlimited
