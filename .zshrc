@@ -46,7 +46,7 @@ export UPDATE_ZSH_DAYS=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras npm node docker nmap ssh-agent)
+plugins=(git git-extras npm node docker nmap ssh-agent kubectl)
 
 # User configuration
 
@@ -84,9 +84,6 @@ bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 
 alias lla='ls -laFG'
-#alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi'
-#alias container_clean="docker ps -a | grep 'days ago' | awk '{print $1}' | xargs docker rm"
-#alias image_clean="docker images | grep 'none' | awk '{print $3}' | xargs docker rmi"
 
 autoload zmv
 
@@ -98,3 +95,9 @@ autoload zmv
 #fi
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi'
+alias container_clean="docker ps -a | grep 'days ago' | awk '{print $1}' | xargs docker rm"
+alias image_clean="docker images | grep 'none' | awk '{print $3}' | xargs docker rmi"
+
+ulimit -n 65536 65536
+ulimit -f unlimited
