@@ -33,6 +33,10 @@ Plugin 'dracula/vim'
 Plugin 'posva/vim-vue'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'mhinz/vim-mix-format'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'mhinz/vim-startify'
 
 call vundle#end()
 
@@ -80,6 +84,9 @@ au FileType css set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType cpp set softtabstop=2 tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.ejs set filetype=html
 
+" python stuff
+let python_highlight_all = 1
+
 " Salt files use jinja template syntax
 let g:sls_use_jinja_syntax = 1
 
@@ -98,10 +105,13 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 " if ALE isn't working correctly,
 " run :ALEInfo to surface potentially missing deps
+"let g:ale_fixers = {'javascript': ['prettier','eslint']}
+"let b:ale_linter_aliases = ['javascript', 'vue']
+"let b:ale_linters = ['eslint', 'vls']
+let g:ale_linters = {'javascript': ['standard']}
+let g:ale_fixers = {'javascript': ['standard']}
+let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
-let g:ale_fixers = {'javascript': ['prettier','eslint']}
-let b:ale_linter_aliases = ['javascript', 'vue']
-let b:ale_linters = ['eslint', 'vls']
 
 " format Elixir files on saving
 let g:mix_format_on_save = 1

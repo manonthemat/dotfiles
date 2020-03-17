@@ -5,7 +5,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="clean"
+#ZSH_THEME="clean"
+ZSH_THEME="clean-m1"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -14,7 +15,7 @@ ZSH_THEME="clean"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=1
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -45,11 +46,11 @@ ZSH_THEME="clean"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras brew npm node docker nmap bower ssh-agent)
+plugins=(git git-extras npm node docker nmap ssh-agent)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/$HOME/.cargo/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/$HOME/.cargo/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 export MANPATH="/usr/local/man:$MANPATH"
 export LYNX_CFG="~/.lynx.cfg"
 
@@ -83,12 +84,17 @@ bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 
 alias lla='ls -laFG'
-alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi'
-alias container_clean="docker ps -a | grep 'days ago' | awk '{print $1}' | xargs docker rm"
-alias image_clean="docker images | grep 'none' | awk '{print $3}' | xargs docker rmi"
-
-PATH="$PATH:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
+#alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi'
+#alias container_clean="docker ps -a | grep 'days ago' | awk '{print $1}' | xargs docker rm"
+#alias image_clean="docker images | grep 'none' | awk '{print $3}' | xargs docker rmi"
 
 autoload zmv
 
-ulimit -n 65536 65536
+# If running from tty1 start sway
+#if [ "$(tty)" = "/dev/tty1" ]; then
+#    ibus-daemon &
+#	sway
+#	exit 0
+#fi
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
