@@ -13,7 +13,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'othree/html5.vim'
 Plugin 'moll/vim-node'
 Plugin 'saltstack/salt-vim'
-Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
@@ -37,6 +36,8 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'mhinz/vim-startify'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'ycm-core/YouCompleteMe'
 
 call vundle#end()
 
@@ -108,8 +109,20 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 "let g:ale_fixers = {'javascript': ['prettier','eslint']}
 "let b:ale_linter_aliases = ['javascript', 'vue']
 "let b:ale_linters = ['eslint', 'vls']
-let g:ale_linters = {'javascript': ['standard']}
-let g:ale_fixers = {'javascript': ['standard']}
+"let g:ale_linters = {'javascript': ['standard']}
+"let g:ale_fixers = {'javascript': ['standard']}
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['tsserver', 'tslint'],
+\   'vue': ['eslint']
+\}
+let g:ale_fixers = {
+\    'javascript': ['eslint'],
+\    'typescript': ['prettier'],
+\    'vue': ['eslint'],
+\    'scss': ['prettier'],
+\    'html': ['prettier']
+\}
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 
@@ -119,8 +132,8 @@ let g:mix_format_on_save = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
