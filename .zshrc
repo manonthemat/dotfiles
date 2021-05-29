@@ -46,11 +46,11 @@ export UPDATE_ZSH_DAYS=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras npm node docker nmap ssh-agent kubectl)
+plugins=(git git-extras npm node docker nmap ssh-agent)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/$HOME/.cargo/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/$HOME/.cargo/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/.local/bin"
 export MANPATH="/usr/local/man:$MANPATH"
 export LYNX_CFG="~/.lynx.cfg"
 
@@ -93,11 +93,16 @@ autoload zmv
 #	sway
 #	exit 0
 #fi
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+
+
 alias c11='clang++ -std=c++11 -stdlib=libc++ -lc++abi'
 alias container_clean="docker ps -a | grep 'days ago' | awk '{print $1}' | xargs docker rm"
 alias image_clean="docker images | grep 'none' | awk '{print $3}' | xargs docker rmi"
 
 ulimit -n 65536 65536
 ulimit -f unlimited
+if [ -e /home/m1/.nix-profile/etc/profile.d/nix.sh ]; then . /home/m1/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
