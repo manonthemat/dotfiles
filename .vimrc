@@ -83,6 +83,7 @@ au FileType html set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType vue set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType css set softtabstop=2 tabstop=2 shiftwidth=2
 au FileType cpp set softtabstop=2 tabstop=2 shiftwidth=2
+au FileType haskell set softtabstop=2 tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.ejs set filetype=html
 
 " python stuff
