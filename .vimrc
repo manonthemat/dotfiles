@@ -37,6 +37,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'mhinz/vim-startify'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'neoclide/coc.nvim'
 
 call vundle#end()
 
