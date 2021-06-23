@@ -26,7 +26,7 @@ Plugin 'racer-rust/vim-racer'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'jparise/vim-graphql'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'dracula/vim'
 Plugin 'posva/vim-vue'
 Plugin 'elixir-editors/vim-elixir'
@@ -37,7 +37,8 @@ Plugin 'nvie/vim-flake8'
 Plugin 'mhinz/vim-startify'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ycm-core/YouCompleteMe'
-Plugin 'neoclide/coc.nvim'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+
 
 call vundle#end()
 
